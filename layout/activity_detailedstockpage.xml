@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/DETAILS_ACTIVITY"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/myToolBarCustom"
+            layout="@layout/toolbarcustom" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tabLayout"
+            app:layout_constraintTop_toTopOf="@+id/tabLayout">
+
+
+            <!--Trending arrows images-->
+
+            <ImageView
+                android:id="@+id/logoImg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.011"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"></ImageView>
+
+            <ImageView
+                android:id="@+id/trendingArrow"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toStartOf="@+id/changePrice"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/ticker"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="NAME"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.234"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"></TextView>
+
+
+            <TextView
+                android:id="@+id/comapnyDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="40dp"
+                android:text="NAME.INC"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ticker"></TextView>
+
+            <TextView
+                android:id="@+id/currentPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Price"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.86"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.002"></TextView>
+
+            <TextView
+                android:id="@+id/changePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="32dp"
+                android:text="changePer"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="359dp"
+                android:layout_height="377dp"
+                android:background="#578F8C8C"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comapnyDetails"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="405dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager">
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusedByDefault="true"
+                    android:text=" " />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusedByDefault="true"
+                    android:text=" " />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="382dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/portfolio"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayout"></TextView>
+
+            <LinearLayout
+                android:id="@+id/porfolioSectionLinearLayout"
+                android:layout_width="372dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <LinearLayout
+                    android:id="@+id/porfolioSection1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/porfolioSection1Title"
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/SHARES_TEXT"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="@string/sharesowned"
+                            android:textSize="16dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/AVGCOST_TEXT"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="@string/avgCost"
+                            android:textSize="16dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/TOTCOST_TEXT"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="@string/totCost"
+                            android:textSize="16dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/CHANGE_TEXT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/change"
+                            android:textSize="16dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/MARKET_VALUE"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="@string/marketVal"
+                            android:textSize="16dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/porfolioSection1Values"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/SHARES"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="SHARES"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/AVGCOST"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="AVGCOST" />
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/TOTCOST"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="TOTCOST" />
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/CHANGE"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="CHANGE"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/MARVAL_VALUE"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="MARVAL"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/porfolioSection2"
+                    android:layout_width="132dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50">
+
+                    <Button
+                        android:id="@+id/tradeButton"
+                        android:layout_width="81dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="28dp"
+                        android:layout_marginBottom="37dp"
+                        android:background="@drawable/tradecustombutton"
+                        android:outlineSpotShadowColor="@color/black"
+                        android:text="TRADE"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"></Button>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+
+                android:id="@+id/StatsSection"
+                android:layout_width="382dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/Stats"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/porfolioSectionLinearLayout"></TextView>
+
+            <LinearLayout
+                android:id="@+id/StatsSectionLinearMain"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StatsSection">
+
+                <LinearLayout
+                    android:id="@+id/StatsSectionLeftLayout"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="50">
+
+                    <LinearLayout
+                        android:id="@+id/StatsLeftLayoutLables"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="50">
+
+                        <TextView
+                            android:id="@+id/OpenPrice_LABEL"
+                            android:layout_width="92.5dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/OpenPrice"
+                            android:textSize="16dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/LowPrice_LABEL"
+                            android:layout_width="92.5dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/LowPrice"
+                            android:textSize="16dp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/StatsLeftLayoutValues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="50">
+
+                        <TextView
+                            android:id="@+id/OpenPrice_Value"
+                            android:layout_width="92.5dp"
+                            android:layout_height="wrap_content"
+                            android:text="OPENPRICE"
+                            android:textSize="16dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/LowPrice_Value"
+                            android:layout_width="92.5dp"
+                            android:layout_height="wrap_content"
+                            android:text="LOWPRICE"
+                            android:textSize="16dp"></TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/StatsSectionRightLayout"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="50">
+
+                    <LinearLayout
+                        android:id="@+id/StatsRightLayoutLables"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="50">
+
+                        <TextView
+                            android:layout_width="92.5dp"
+                            android:layout_height="20dp"
+                            android:text="@string/HighPrice"></TextView>
+
+                        <TextView
+                            android:layout_width="92.5dp"
+                            android:layout_height="20dp"
+                            android:text="@string/PrevClose"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/StatsRightLayoutValues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="50">
+
+                        <TextView
+                            android:id="@+id/HighPrice_Value"
+                            android:layout_width="92.5dp"
+                            android:layout_height="wrap_content"
+                            android:text="HIGHPRICE"
+                            android:textSize="16dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/PrevPrice_Value"
+                            android:layout_width="92.5dp"
+                            android:layout_height="wrap_content"
+                            android:text="PREVPRICE"
+                            android:textSize="16dp"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ABOUT SECTION  -->
+            <TextView
+                android:id="@+id/AboutSection"
+                android:layout_width="382dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/About"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/StatsSectionLinearMain"></TextView>
+
+            <LinearLayout
+                android:id="@+id/AboutLayoutMain"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AboutSection">
+
+                <LinearLayout
+                    android:id="@+id/AboutLayerLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/IPO_Label"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="@string/IPOStartDate"></TextView>
+
+                    <TextView
+                        android:id="@+id/industry_LABEL"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="@string/Industry"></TextView>
+
+                    <TextView
+                        android:id="@+id/webapge_LABLE"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="@string/Webpage"></TextView>
+
+                    <TextView
+                        android:id="@+id/Company_Peer_LABEL"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="@string/CompanyPeer"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/AboutLayerRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="156dp"
+                    tools:layout_editor_absoluteY="881dp">
+
+                    <TextView
+                        android:id="@+id/IPO_VALUE"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="IPO"></TextView>
+
+                    <TextView
+                        android:id="@+id/industry_VALUE"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="INDUSTRY_VALUE"></TextView>
+
+                    <TextView
+                        android:id="@+id/webapge_VALUE"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="WEBPAGE_VALUE"></TextView>
+
+                    <HorizontalScrollView
+                        android:id="@+id/peersScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp">
+
+                        <LinearLayout
+                            android:id="@+id/company_peer_VALUE"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:orientation="horizontal"></LinearLayout>
+
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--INSIGHTS SECTION-->
+
+            <TextView
+                android:id="@+id/InsightsSection"
+                android:layout_width="382dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/insights"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AboutLayoutMain"></TextView>
+
+            <LinearLayout
+                android:id="@+id/IsightsLayoutMain"
+                android:layout_width="365dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/InsightsSection">
+
+                <TextView
+                    android:id="@+id/socialSentiments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/socialSentiments"
+                    android:textSize="22dp"></TextView>
+
+                <TableLayout
+                    android:id="@+id/socialSemtimentsTabble"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/IsightsLayoutMain">
+
+                    <TableRow
+                        android:id="@+id/Sentiments_Row1"
+                        android:layout_width="match_parent"
+                        android:layout_height="162dp"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/Table_Heading1"
+                            android:layout_width="174dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#d1cfcf"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="COMPANY_DESC" />
+
+                        <TextView
+                            android:id="@+id/Table_Heading2"
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#d1cfcf"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/reddit" />
+
+                        <TextView
+                            android:id="@+id/Table_Heading3"
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#d1cfcf"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/twitter" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/Sentiments_Row2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/Row2_1"
+                            android:layout_width="174dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#d1cfcf"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/totMentions" />
+
+                        <TextView
+                            android:id="@+id/Row2_2"
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#f2f0f0"
+                            android:fontFamily="sans-serif-light"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/Row2_3"
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#f2f0f0"
+                            android:fontFamily="sans-serif-light"
+                            android:text="TextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/Sentiments_Row3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/Row3_1"
+                            android:layout_width="174dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#d1cfcf"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/posMentions" />
+
+                        <TextView
+                            android:id="@+id/Row3_2"
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#f2f0f0"
+                            android:fontFamily="sans-serif-light"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/Row3_3"
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#f2f0f0"
+                            android:fontFamily="sans-serif-light"
+                            android:text="TextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/Sentiments_Row4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/Row4_1"
+                            android:layout_width="174dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#d1cfcf"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/negMentions" />
+
+                        <TextView
+                            android:id="@+id/Row4_2"
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#f2f0f0"
+                            android:fontFamily="sans-serif-light"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/Row4_3"
+                            android:layout_width="87dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="#f2f0f0"
+                            android:fontFamily="sans-serif-light"
+                            android:text="TextView" />
+                    </TableRow>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/FRAME"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/IsightsLayoutMain">
+
+                <WebView
+                    android:id="@+id/WEBVIEW_RC"
+                    android:layout_width="399dp"
+                    android:layout_height="459dp"></WebView>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/Frame2"
+                android:layout_width="466dp"
+                android:layout_height="462dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FRAME">
+
+                <WebView
+                    android:id="@+id/HISTORIC_WEBVIEW"
+                    android:layout_width="397dp"
+                    android:layout_height="422dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_x="198dp"
+                        android:layout_y="396dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_x="68dp"
+                        android:layout_y="478dp" />
+                </WebView>
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/NewsSection"
+                android:layout_width="382dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="sans-serif-black"
+                android:text="News"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Frame2"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/NEWS_RECYCLER"
+                android:layout_width="500dp"
+                android:layout_height="600dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NewsSection" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
