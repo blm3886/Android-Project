@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/HOME_LAYOUT_ROOT"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:menu="@menu/menu"
+    tools:context=".HomeActivity">
+
+    <include
+        android:id="@+id/myToolBarCustom"
+        layout="@layout/toolbarcustom" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_date1"
+            android:layout_width="404dp"
+            android:layout_height="35dp"
+            android:text="Date"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="85dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/LIGHT_GREY"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_vertical"
+            android:text="PORTFOLIO"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_NetWorth"
+                android:layout_width="212dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Net Worth" />
+
+            <TextView
+                android:id="@+id/text_CashBalance"
+                android:layout_width="173dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Cash Balance" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/text_netWorthValue"
+                android:layout_width="212dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="netWorthValue" />
+
+            <TextView
+                android:id="@+id/text_currentBalValue"
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="currentBalValue" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="#c0c0c0" />
+
+        <ListView
+            android:id="@+id/portfolioID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@color/white" />
+
+        <TextView
+            android:fontFamily="sans-serif-black"
+            android:textSize="14dp"
+            android:background="@color/LIGHT_GREY"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:text="FAVOURITES" />
+
+        <ListView
+            android:id="@+id/Favourites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:autoLink="web"
+            android:gravity="center_horizontal"
+            android:text="Powered by Finhub"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="85dp" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

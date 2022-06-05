@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Stocks</string>
+    <string name="search_hint">Search...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="sharesowned">Shares Owned:</string>
+    <string name="avgCost">Avg. Cost / Share:</string>
+    <string name="totCost">Total Cost:</string>
+    <string name="change">Change:</string>
+    <string name="marketVal">market Value:</string>
+    <string name="Stats">Stats</string>
+    <string name="OpenPrice">Open Price:</string>
+    <string name="LowPrice">Low Price:</string>
+    <string name="PrevClose">Prev. Close:</string>
+    <string name="HighPrice">High Price:</string>
+    <string name="About">About</string>
+    <string name="IPOStartDate">IPO Start Date</string>
+    <string name="Industry">Industry</string>
+    <string name="Webpage">Webpage</string>
+    <string name="CompanyPeer">Company Peers</string>
+
+    <!---INSIGHTS SECTION-->
+    <string name="insights">Insights</string>
+    <string name="socialSentiments">Social Sentiments</string>
+    <string name="totMentions">Total Mentions</string>
+    <string name="posMentions">Positive Mentions</string>
+    <string name="negMentions">Negative Mentions</string>
+    <string name="reddit">Reddit</string>
+    <string name="twitter">Twitter</string>
+
+
+</resources>
